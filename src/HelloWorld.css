@@ -1,0 +1,19 @@
+h1 {
+  font-size: 5em;
+  float: left;
+  padding-top: 30px;
+  padding-left: 400px;
+  font: Helvetica
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 5s linear;
+  height: 150px;
+  width: 150px;
+  float: center;
+}

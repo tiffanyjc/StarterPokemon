@@ -1,0 +1,128 @@
+import React, { Component } from 'react';
+import './App.css';
+import FilteredList from './FilteredList';
+import Title from './HelloWorld';
+
+const produce = [
+  {name: "Bulbasaur",
+   type: "Grass",
+   generation: "Kanto",
+   img: "https://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png",
+   pokedex: "001"},
+  {name: "Charmander",
+   type: "Fire",
+   generation: "Kanto",
+   img: "https://cdn.bulbagarden.net/upload/thumb/7/73/004Charmander.png/250px-004Charmander.png",
+   pokedex: "004"},
+  {name: "Squirtle",
+   type: "Water",
+   generation: "Kanto",
+   img: "https://cdn.bulbagarden.net/upload/thumb/3/39/007Squirtle.png/250px-007Squirtle.png",
+   pokedex: "007"},
+  {name: "Chikorita",
+  type: "Grass",
+  generation: "Johto",
+  img: "https://cdn.bulbagarden.net/upload/thumb/b/bf/152Chikorita.png/250px-152Chikorita.png",
+  pokedex: "152"},
+  {name: "Cyndaquil",
+  type: "Fire",
+  generation: "Johto",
+  img: "https://cdn.bulbagarden.net/upload/thumb/9/9b/155Cyndaquil.png/250px-155Cyndaquil.png",
+  pokedex: "155"},
+  {name: "Totodile",
+  type: "Water",
+  generation: "Johto",
+  img: "https://cdn.bulbagarden.net/upload/thumb/d/df/158Totodile.png/240px-158Totodile.png",
+  pokedex: "158"},
+  {name: "Treecko",
+   type: "Grass",
+   generation: "Hoenn",
+   img: "https://cdn.bulbagarden.net/upload/thumb/2/2c/252Treecko.png/240px-252Treecko.png",
+   pokedex: "252"},
+  {name: "Torchic",
+   type: "Fire",
+   generation: "Hoenn",
+   img: "https://cdn.bulbagarden.net/upload/thumb/9/91/255Torchic.png/240px-255Torchic.png",
+   pokedex: "255"},
+  {name: "Mudkip",
+   type: "Water",
+   generation: "Hoenn",
+   img: "https://cdn.bulbagarden.net/upload/thumb/6/60/258Mudkip.png/240px-258Mudkip.png",
+   pokedex: "258"},
+  {name: "Turtwig",
+   type: "Grass",
+   generation: "Sinnoh",
+   img: "https://cdn.bulbagarden.net/upload/thumb/5/5c/387Turtwig.png/240px-387Turtwig.png",
+   pokedex: "387"},
+  {name: "Chimchar",
+   type: "Fire",
+   generation: "Sinnoh",
+   img: "https://cdn.bulbagarden.net/upload/thumb/7/76/390Chimchar.png/240px-390Chimchar.png",
+   pokedex: "390"},
+  {name: "Piplup",
+   type: "Water",
+   generation: "Sinnoh",
+   img: "https://cdn.bulbagarden.net/upload/thumb/b/b1/393Piplup.png/240px-393Piplup.png",
+   pokedex: "393"},
+  {name: "Snivy",
+   type: "Grass",
+   generation: "Unova",
+   img: "https://cdn.bulbagarden.net/upload/thumb/7/75/495Snivy.png/240px-495Snivy.png",
+   pokedex: "495"},
+  {name: "Tepig",
+   type: "Fire",
+   generation: "Unova",
+   img: "https://cdn.bulbagarden.net/upload/thumb/5/5b/498Tepig.png/240px-498Tepig.png",
+   pokedex: "498"},
+  {name: "Oshawott",
+   type: "Water",
+   generation: "Unova",
+   img: "https://cdn.bulbagarden.net/upload/thumb/3/3b/501Oshawott.png/240px-501Oshawott.png",
+   pokedex: "501"},
+  {name: "Chespin",
+   type: "Grass",
+   generation: "Kalos",
+   img: "https://cdn.bulbagarden.net/upload/thumb/c/ca/650Chespin.png/240px-650Chespin.png",
+   pokedex: "650"},
+  {name: "Fennekin",
+   type: "Fire",
+   generation: "Kalos",
+   img: "https://cdn.bulbagarden.net/upload/thumb/3/3d/653Fennekin.png/240px-653Fennekin.png",
+   pokedex: "653"},
+  {name: "Froakie",
+   type: "Water",
+   generation: "Kalos",
+   img: "https://cdn.bulbagarden.net/upload/thumb/1/18/656Froakie.png/240px-656Froakie.png",
+   pokedex: "656"},
+  {name: "Rowlet",
+   type: "Grass",
+   generation: "Alola",
+   img: "https://cdn.bulbagarden.net/upload/7/74/722Rowlet.png",
+   pokedex: "722"},
+  {name: "Litten",
+   type: "Fire",
+   generation: "Alola",
+   img: "https://cdn.bulbagarden.net/upload/0/0e/725Litten.png",
+   pokedex: "725"},
+  {name: "Popplio",
+   type: "Water",
+   generation: "Alola",
+   img: "https://cdn.bulbagarden.net/upload/d/d8/728Popplio.png",
+   pokedex: "728"}
+];
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <Title name = "Starter Pokemon" />
+        </header>
+        <br></br>
+        <FilteredList items = {produce} />
+      </div>
+    );
+  }
+}
+
+export default App;
